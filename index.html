@@ -2,87 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Web Development Resources</title>
+  <title>App Development — Resources</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 2rem;
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #f5f4ef;
+      color: #1a1a1a;
+      font-size: 14px;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      color: #b0aca0;
+      margin-bottom: 12px;
     }
 
     h1 {
-      margin-bottom: 0.5rem;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+      margin-bottom: 8px;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
+    .subtitle {
+      font-size: 14px;
+      color: #888680;
+      max-width: 380px;
+      margin-bottom: 56px;
     }
 
-    li {
-      margin: 0.75rem 0;
+    .section { margin-bottom: 40px; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: #c0bbb2;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    a {
-      font-size: 1.1rem;
+    /* Units */
+    .unit-row {
+      display: flex;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 0.5px solid rgba(0,0,0,0.09);
+      gap: 14px;
       text-decoration: none;
-      color: #0056b3;
+      color: inherit;
+    }
+    .unit-row:first-child { border-top: 0.5px solid rgba(0,0,0,0.09); }
+    a.unit-row:hover .unit-name { color: #1a5fd4; }
+
+    .unit-code {
+      font-size: 13px;
+      font-weight: 500;
+      width: 36px;
+      flex-shrink: 0;
+      color: #1a1a1a;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .unit-info { flex: 1; min-width: 0; }
+
+    .unit-name {
+      font-size: 14px;
+      color: #1a1a1a;
+      transition: color 0.12s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+
+    .unit-meta { font-size: 12px; color: #999590; }
+
+    .unit-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+    .badge-active { background: #e8f0fe; color: #1a5fd4; }
+    .badge-done { color: #c0bbb2; border: 0.5px solid rgba(0,0,0,0.1); }
+
+    .arrow { color: #c0bbb2; font-size: 13px; }
+
+    /* Resources */
+    .resource-list { display: flex; flex-direction: column; gap: 6px; }
+
+    .resource-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 14px;
+      background: #ffffff;
+      border: 0.5px solid rgba(0,0,0,0.09);
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.12s;
+    }
+    a.resource-row:hover { border-color: rgba(0,0,0,0.18); }
+    .resource-row.dim { opacity: 0.45; pointer-events: none; }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-live { background: #1a7a4a; }
+    .dot-soon { background: #c0bbb2; }
+
+    .resource-name { flex: 1; font-size: 14px; color: #1a1a1a; }
+    .resource-unit { font-size: 12px; color: #c0bbb2; }
 
     .note {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: #f5f5f5;
-      border-left: 4px solid #0056b3;
+      margin-top: 36px;
+      font-size: 13px;
+      color: #c0bbb2;
     }
   </style>
 </head>
-
 <body>
-  <h1>Web Development Learning Resources</h1>
+<div class="page">
 
-  <p>
-    Welcome. This page provides links to all current learning resources.
-    New materials will be added over time.
-  </p>
+  <p class="eyebrow">Application Development</p>
+  <h1>Application Development</h1>
+  <p class="subtitle">Bookmark this page. Resources are added as they become available throughout the year.</p>
 
-  <h2>Available Resources</h2>
-
-  <ul>
-    <li>
-      <a href="Exam.html">
-        1. Exam Builder
+  <div class="section">
+    <p class="section-label">Units</p>
+    <div>
+      <a class="unit-row" href="Exam.html">
+        <span class="unit-code">F160</span>
+        <div class="unit-info">
+          <div class="unit-name">Fundamentals of Application Development</div>
+          <div class="unit-meta">Written exam · 1 hr 15 min · 60 marks</div>
+        </div>
+        <div class="unit-right">
+          <span class="badge badge-active">Active</span>
+          <span class="arrow">↗</span>
+        </div>
       </a>
-    </li>
-
-    <li>
-      <a href="resources/html-basics.html">
-        2. HTML Basics
-      </a>
-    </li>
-
-    <li>
-      <a href="resources/css-basics.html">
-        3. CSS Basics
-      </a>
-    </li>
-
-    <li>
-      <a href="resources/javascript.html">
-        4. JavaScript Basics
-      </a>
-    </li>
-  </ul>
-
-  <div class="note">
-    <strong>Note for students:</strong>
-    Bookmark this page. All new resources will be linked here as they become available.
+      <div class="unit-row">
+        <span class="unit-code">F162</span>
+        <div class="unit-info">
+          <div class="unit-name">Designing &amp; Communicating UX/UI Solutions</div>
+          <div class="unit-meta">NEA assignment</div>
+        </div>
+        <div class="unit-right">
+          <span class="badge badge-done">Complete</span>
+        </div>
+      </div>
+      <div class="unit-row">
+        <span class="unit-code">F165</span>
+        <div class="unit-info">
+          <div class="unit-name">Immersive Technology Solution Development</div>
+          <div class="unit-meta">NEA assignment</div>
+        </div>
+        <div class="unit-right">
+          <span class="badge badge-active">Active</span>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="section">
+    <p class="section-label">Resources</p>
+    <div class="resource-list">
+      <a class="resource-row" href="Exam.html">
+        <span class="dot dot-live"></span>
+        <span class="resource-name">F160 Exam Builder</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="note">Greyed out items are in progress — check back regularly.</p>
+
+</div>
 </body>
 </html>
