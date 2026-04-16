@@ -56,7 +56,6 @@
       margin-bottom: 10px;
     }
 
-    /* Units */
     .unit-row {
       display: flex;
       align-items: center;
@@ -100,10 +99,10 @@
     }
     .badge-active { background: #e8f0fe; color: #1a5fd4; }
     .badge-done { color: #c0bbb2; border: 0.5px solid rgba(0,0,0,0.1); }
+    .badge-upcoming { color: #c0bbb2; border: 0.5px solid rgba(0,0,0,0.1); }
 
     .arrow { color: #c0bbb2; font-size: 13px; }
 
-    /* Resources */
     .resource-list { display: flex; flex-direction: column; gap: 6px; }
 
     .resource-row {
@@ -119,19 +118,16 @@
       transition: border-color 0.12s;
     }
     a.resource-row:hover { border-color: rgba(0,0,0,0.18); }
-    .resource-row.dim { opacity: 0.45; pointer-events: none; }
 
     .dot {
       width: 6px;
       height: 6px;
       border-radius: 50%;
       flex-shrink: 0;
+      background: #1a7a4a;
     }
-    .dot-live { background: #1a7a4a; }
-    .dot-soon { background: #c0bbb2; }
 
     .resource-name { flex: 1; font-size: 14px; color: #1a1a1a; }
-    .resource-unit { font-size: 12px; color: #c0bbb2; }
 
     .note {
       margin-top: 36px;
@@ -148,8 +144,18 @@
   <p class="subtitle">Bookmark this page. Resources are added as they become available throughout the year.</p>
 
   <div class="section">
-    <p class="section-label">Units</p>
+    <p class="section-label">Year 1</p>
     <div>
+      <div class="unit-row">
+        <span class="unit-code">F162</span>
+        <div class="unit-info">
+          <div class="unit-name">Designing &amp; Communicating UX/UI Solutions</div>
+          <div class="unit-meta">NEA assignment</div>
+        </div>
+        <div class="unit-right">
+          <span class="badge badge-done">Complete</span>
+        </div>
+      </div>
       <a class="unit-row" href="Exam.html">
         <span class="unit-code">F160</span>
         <div class="unit-info">
@@ -161,16 +167,6 @@
           <span class="arrow">↗</span>
         </div>
       </a>
-      <div class="unit-row">
-        <span class="unit-code">F162</span>
-        <div class="unit-info">
-          <div class="unit-name">Designing &amp; Communicating UX/UI Solutions</div>
-          <div class="unit-meta">NEA assignment</div>
-        </div>
-        <div class="unit-right">
-          <span class="badge badge-done">Complete</span>
-        </div>
-      </div>
       <div class="unit-row">
         <span class="unit-code">F165</span>
         <div class="unit-info">
@@ -185,16 +181,42 @@
   </div>
 
   <div class="section">
+    <p class="section-label">Year 2</p>
+    <div>
+      <div class="unit-row">
+        <span class="unit-code">F161</span>
+        <div class="unit-info">
+          <div class="unit-name">Developing Application Software</div>
+          <div class="unit-meta">Written exam · 1 hr 15 min · 60 marks</div>
+        </div>
+        <div class="unit-right">
+          <span class="badge badge-upcoming">Upcoming</span>
+        </div>
+      </div>
+      <div class="unit-row">
+        <span class="unit-code">F163</span>
+        <div class="unit-info">
+          <div class="unit-name">Game Development</div>
+          <div class="unit-meta">NEA assignment</div>
+        </div>
+        <div class="unit-right">
+          <span class="badge badge-upcoming">Upcoming</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
     <p class="section-label">Resources</p>
     <div class="resource-list">
       <a class="resource-row" href="Exam.html">
-        <span class="dot dot-live"></span>
+        <span class="dot"></span>
         <span class="resource-name">F160 Exam Builder</span>
       </a>
     </div>
   </div>
 
-  <p class="note">Greyed out items are in progress — check back regularly.</p>
+  <p class="note">More resources will appear here as they become available.</p>
 
 </div>
 </body>
